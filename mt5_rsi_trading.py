@@ -58,7 +58,7 @@ def main():
             
             if rates is None or len(rates) < 12:
                 print("Not enough data to analyze")
-                time.sleep(60)  # Wait 1 minute before next attempt
+                time.sleep(1)  # Wait 1 second before next attempt
                 continue
             
             # Extract closing prices for RSI calculation
@@ -77,7 +77,7 @@ def main():
             
             if len(recent_rsis) < 3:
                 print("Not enough RSI values calculated")
-                time.sleep(60)
+                time.sleep(1)
                 continue
             
             # Count how many of the last 3 RSIs are less than 38
@@ -153,12 +153,12 @@ def main():
             print(f"Current Price: {current_price}, Last 3 RSIs: {recent_rsis[-3:]}")
             print(f"RSIs < 38: {rsi_less_than_38}, RSIs > 65: {rsi_more_than_65}")
             
-            # Wait 1 minute before next check
-            time.sleep(60)
+            # Wait 1 second before next check
+            time.sleep(1)
         
         except Exception as e:
             print(f"An error occurred: {e}")
-            time.sleep(60)
+            time.sleep(1)
     
     # Shutdown MT5 connection
     mt5.shutdown()
