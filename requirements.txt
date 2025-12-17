@@ -1,0 +1,5 @@
+# MetaTrader5 is required but needs to be installed separately
+# Install with: pip install MetaTrader5
+# Also requires: pandas, numpy
+pandas
+numpy
